@@ -1,7 +1,8 @@
+/* ---------- Hero "Apa itu UKM Robotika IR64?" ---------- */
 .tentang-hero {
     position: relative; overflow: hidden; text-align: center; padding-bottom: 0;
 }
-.tentang-hero::before {
+.tentang-hero::before {           
     content: ""; position: absolute; left: 50%; top: 40px; width: 1000px; height: 1000px;
     transform: translateX(-50%); border: 1px dashed #c5d6f5; border-radius: 50%; z-index: 0;
 }
@@ -26,7 +27,7 @@
 .divisi article {
     counter-increment: nomor; background: #fff; border-radius: var(--radius); padding: 40px;
 }
-.divisi article::before {
+.divisi article::before {        
     content: "0" counter(nomor); display: grid; place-items: center; width: 56px; height: 56px;
     margin-bottom: 16px; border-radius: 16px; background: var(--red); color: #fff;
     font-size: 20px; font-weight: 800;

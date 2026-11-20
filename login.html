@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Pengurus | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Halaman ini berdiri sendiri: hanya css/login.css -->
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/auth.js"></script>
 </head>
 <body>
-    <header>
-        <p><a href="index.html">&larr; Beranda</a></p>
-        <a href="index.html">
-            <div class="logo">
-                
-            </div>
-        </a>
-    </header>
-
     <main>
+        <img src="assets/images/Maskot 1.svg" alt="Maskot SIROBOT">
+
+        <header>
+            <p><a href="index.html">&larr; Beranda</a></p>
+            <a href="index.html" class="logo" aria-label="SIROBOT, ke Beranda"><strong class="sr-only">SIROBOT</strong></a>
+        </header>
+
         <section>
             <p>SELAMAT DATANG</p>
-            <h1>Masuk sebagai Pengurus UKM</h1>
-            <p>Masuk sebagai pengurus UKM menggunakan akun terdaftar.</p>
+            <h1>Masuk sebagai Pengurus</h1>
+            <p>Gunakan akun pengurus UKM Robotika untuk mengelola konten website.</p>
 
-            <form action="dashboard.html" method="get">
+            <form action="dashboard.html" method="post" novalidate>
                 <p>
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" placeholder="Masukkan email pengurus">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="username">
                 </p>
                 <p>
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" name="password" placeholder="Masukkan password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" autocomplete="current-password">
                 </p>
+                <p class="form-error" role="alert"></p>
                 <p><button type="submit">Masuk</button></p>
             </form>
 
-            <p><small>Halaman ini hanya struktur HTML. Proses autentikasi belum berjalan.</small></p>
+            <p class="catatan-demo">Akun demo: admin@sirobot.test / sirobot123 (simulasi, belum terhubung ke server).</p>
         </section>
-        <img src="assets/images/maskot-login.png" alt="Maskot robot SIROBOT">
-    </main>
 
-    <footer>
-        <p><small>&copy; 2026 UKM Robotika IR64 POLIJE</small></p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 UKM Robotika IR64 POLIJE</p>
+        </footer>
+    </main>
+    <script src="js/login.js"></script>
 </body>
 </html>

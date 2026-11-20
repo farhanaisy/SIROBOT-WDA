@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/kartu.css">
+    <link rel="stylesheet" href="css/berita.css">
 </head>
-
 <body>
-    <!-- Navigasi -->
-    <nav class="navbar" id="navbar">
-        <a href="#" class="logo">SIROBOT</a>
-
-        <button class="toggle" id="toggle" aria-label="Buka menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-
-        <ul class="menu">
-            <li><a href="index.html" class="active">Beranda</a></li>
-            <li><a href="modul.html">Modul</a></li>
-            <li><a href="tentang-kami.html">Tentang kami</a></li>
-            <li><a href="struktur.html">Struktur</a></li>
-            <li><a href="berita.html">Berita</a></li>
-        </ul>
-
-        <div class="actions">
-            <button class="login.html">Login</button>
-            <button class="pendaftaran.html">Join Us <span aria-hidden="true">&rarr;</span></button>
-        </div>
-    </nav>
+    <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
+    <header data-komponen="navbar" data-aktif="berita"></header>
 
     <main>
         <!-- Judul -->
-        <section>
-            <h1>Berita IR 64 Robotics</h1>
+        <section class="judul-halaman">
+            <h1>Berita & Prestasi <span class="sorot">IR 64 Robotics</span></h1>
             <p>Kabar terbaru dari IR 64 Robotics</p>
         </section>
 
         <!-- Sorotan utama -->
-        <section>
+        <section class="sorotan">
             <h2>Sorotan utama</h2>
             <p>Berita terbaru dan paling penting seputar kegiatan UKM IR64 Robotics.</p>
             <article>
-                <img src="assets/images/sorotan-olivia.jpg" alt="Tim UKM Robotika menerima penghargaan Olivia XI 2026">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Tim UKM Robotika menerima penghargaan Olivia XI 2026">
                 <p><strong>Update Now</strong></p>
                 <h3>Kejuaraan OLIVIA XI 2026: kategori lomba Programmable Logic Controller</h3>
                 <p>Tim UKM Robotika berhasil meraih kejuaraan tingkat nasional Vokasi di Lomba Olivia XI 2026 di Vokasi
@@ -52,12 +39,12 @@
         </section>
 
         <!-- Daftar berita -->
-        <section>
-            <h2>Daftar Berita</h2>
+        <section class="daftar-berita">
+            <h2>Daftar Berita & Prestasi</h2>
             <form action="#" method="get">
                 <p>
-                    <label for="cari">Cari topik berita</label>
-                    <input type="search" id="cari" name="cari" placeholder="Cari topik berita disini...">
+                    <label for="cari">Cari topik</label>
+                    <input type="search" id="cari" name="cari" placeholder="Cari topik disini...">
                 </p>
                 <p>
                     <label for="kategori">Kategori</label>
@@ -65,6 +52,7 @@
                         <option>Semua Kategori</option>
                         <option>Prestasi</option>
                         <option>Kegiatan</option>
+                        <option>Organisasi</option>
                     </select>
                     <label for="urutan">Urutkan</label>
                     <select id="urutan" name="urutan">
@@ -74,74 +62,58 @@
                 </p>
             </form>
 
-            <article>
-                <img src="assets/images/berita-olivia.jpg" alt="Tim UKM Robotika pada Olivia XI 2026">
+            <article data-kategori="prestasi" data-urut="0">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Tim UKM Robotika pada Olivia XI 2026">
                 <h3>Juara Nasional Olivia XI 2026</h3>
                 <p>Prestasi · Vokasi UNESA</p>
                 <p>Kategori Programmable Logic Controller.</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
-            <article>
-                <img src="assets/images/berita-2.jpg" alt="Foto kegiatan UKM Robotika">
+            <article data-kategori="kegiatan" data-urut="1">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
                 <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
+                <p>Kegiatan · [Penyelenggara]</p>
                 <p>[Deskripsi singkat berita.]</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
-            <article>
-                <img src="assets/images/berita-3.jpg" alt="Foto kegiatan UKM Robotika">
+            <article data-kategori="kegiatan" data-urut="2">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
                 <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
+                <p>Kegiatan · [Penyelenggara]</p>
                 <p>[Deskripsi singkat berita.]</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
-            <article>
-                <img src="assets/images/berita-4.jpg" alt="Foto kegiatan UKM Robotika">
+            <article data-kategori="organisasi" data-urut="3">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
                 <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
+                <p>Organisasi · [Penyelenggara]</p>
                 <p>[Deskripsi singkat berita.]</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
-            <article>
-                <img src="assets/images/berita-5.jpg" alt="Foto kegiatan UKM Robotika">
+            <article data-kategori="kegiatan" data-urut="4">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
                 <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
+                <p>Kegiatan · [Penyelenggara]</p>
                 <p>[Deskripsi singkat berita.]</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
-            <article>
-                <img src="assets/images/berita-6.jpg" alt="Foto kegiatan UKM Robotika">
+            <article data-kategori="prestasi" data-urut="5">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
                 <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
+                <p>Prestasi · [Penyelenggara]</p>
                 <p>[Deskripsi singkat berita.]</p>
                 <a href="detail-berita.html">Baca Selengkapnya</a>
             </article>
         </section>
+    
     </main>
 
-    <footer>
-        <h2>Apakah ada pertanyaan?</h2>
-        <p>Jika anda bingung segera hubungi kontak kami</p>
-        <p><a href="kontak.html">Hubungi kami</a></p>
-        <nav aria-label="Navigasi footer">
-            <ul>
-                <li><a href="modul.html">Modul</a></li>
-                <li><a href="prestasi.html">Prestasi</a></li>
-                <li><a href="tentang-kami.html">Tentang kami</a></li>
-                <li><a href="kontak.html">Kontak kami</a></li>
-            </ul>
-        </nav>
-        <address>
-            <p><strong>WhatsApp</strong><br>+62 1234567890</p>
-            <p><strong>Email</strong><br>info@logoipsum.com</p>
-        </address>
-        <p><strong>SIROBOT</strong> – Akun media sosial kami:
-            <a href="#">Instagram</a> |
-            <a href="#">TikTok</a> |
-            <a href="#">YouTube</a>
-        </p>
-        <p><small>&copy; 2026 UKM Robotika IR64 POLIJE</small></p>
-    </footer>
-</body>
+    <!-- Footer: dibuat oleh js/komponen/footer.js -->
+    <footer data-komponen="footer"></footer>
 
+    <script src="js/komponen/navbar.js"></script>
+    <script src="js/komponen/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/berita.js"></script>
+</body>
 </html>
