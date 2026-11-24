@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/detail-modul.css">
+    <link rel="stylesheet" href="css/animasi.css">
 </head>
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
@@ -19,22 +20,22 @@
     <main>
         <section class="detail-modul">
             <figure class="sampul">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul modul">
+                <img id="dm-gambar" src="" alt="">
             </figure>
             <article>
                 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a> <span>/</span> <a href="modul.html">Edukasi</a> <span>/</span> <span aria-current="page">Detail Modul</span></nav>
-                <span class="status">[Kategori]</span>
-                <h1>[Judul Modul Diklat]</h1>
-                <p class="deskripsi">[Deskripsi modul: materi yang dipelajari, tingkat kesulitan, dan prasyarat.]</p>
+                <span class="status" id="dm-level"></span>
+                <h1 id="dm-judul"></h1>
+                <p class="deskripsi" id="dm-deskripsi"></p>
                 <ul class="meta">
                     <li><strong>Format</strong> PDF</li>
-                    <li><strong>Ukuran</strong> [..] MB</li>
-                    <li><strong>Diunggah</strong> [tanggal]</li>
+                    <li><strong>Ukuran</strong> <span id="dm-ukuran"></span></li>
+                    <li><strong>Diunggah</strong> <span id="dm-tanggal"></span></li>
                 </ul>
                 <p class="aksi">
                     <!-- ISI: ganti dengan berkas PDF di assets/modul/ -->
-                    <a href="assets/modul/gambar-kartu-berita.svg" class="btn btn-join">Unduh PDF</a>
-                    <a href="assets/modul/gambar-kartu-berita.svg" class="btn btn-putih">Lihat PDF</a>
+                    <a id="dm-unduh" href="assets/modul/C_E41261032_Moch_Farhan_Aisy _js.pdf" class="btn btn-join" download>Unduh PDF</a>
+                    <a id="dm-lihat" href="assets/modul/C_E41261032_Moch_Farhan_Aisy _js.pdf" class="btn btn-putih" target="_blank" rel="noopener">Lihat PDF</a>
                 </p>
                 <p><a href="modul.html" class="kembali">&larr; Kembali ke daftar modul</a></p>
             </article>
@@ -42,8 +43,8 @@
 
         <section class="pratinjau">
             <h2 class="garis-merah">Pratinjau PDF</h2>
-            <object data="assets/modul/gambar-kartu-berita.svg" type="application/pdf">
-                <p>Pratinjau tidak tersedia. <a href="assets/modul/gambar-kartu-berita.svg">Buka PDF</a></p>
+            <object id="dm-objek" type="application/pdf">
+                <p>Pratinjau tidak tersedia. <a id="dm-buka" href="#">Buka PDF</a></p>
             </object>
         </section>
     </main>
@@ -54,5 +55,7 @@
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/detail-modul.js"></script>
 </body>
 </html>

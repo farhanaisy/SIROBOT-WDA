@@ -28,3 +28,7 @@
 
 @media (max-width: 900px) { .prestasi-daftar { grid-template-columns: 1fr; } }
 @media (min-width: 560px) and (max-width: 900px) { .prestasi-daftar { grid-template-columns: 1fr 1fr; } }
+
+/* seluruh kartu bisa diklik lewat link di judul */
+.prestasi-daftar article { position: relative; }
+.prestasi-daftar h3 a::after { content: ""; position: absolute; inset: 0; }

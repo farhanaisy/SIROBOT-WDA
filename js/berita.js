@@ -1,8 +1,4 @@
-/* =====================================================
-   berita.js : halaman BERITA
-   Filter: cari + kategori + urutan (Terbaru/Terlama)
-   (kategori tiap artikel ada di atribut data-kategori)
-   ===================================================== */
+/* berita.js : halaman BERITA*/
 (function () {
   'use strict';
   var seksi = document.querySelector('.daftar-berita');
